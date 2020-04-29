@@ -3,7 +3,9 @@ def output
 pipeline {
     
    agent any
-
+   tools {
+        go {'gc-1.14'}
+   }
    stages {
       stage('Hello') {
          steps {
@@ -14,7 +16,7 @@ pipeline {
       }
       stage('Step two') {
          steps {
-            echo output
+            sh 'go build'
          }
       }
    }
