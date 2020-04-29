@@ -1,7 +1,6 @@
 def output
 
 pipeline {
-    
    agent any
    tools {
         go {'gc-1.14'}
