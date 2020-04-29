@@ -19,7 +19,7 @@ pipeline {
       }
       stage('Publish artifact') {
        steps {
-         archiveArtifacts 'example1_git'
+         archiveArtifacts 'hw-day2_master'
        }
      }
    }
