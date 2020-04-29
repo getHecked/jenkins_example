@@ -19,5 +19,10 @@ pipeline {
             sh 'go build'
          }
       }
+      stage('Publish artifact') {
+       steps {
+         archiveArtifacts 'jenkins_example'
+       }
+     }
    }
 }
