@@ -21,7 +21,7 @@ pipeline {
       }
       stage('Publish artifact') {
        steps {
-         archiveArtifacts 'jenkins_example'
+         archiveArtifacts 'example1_git'
        }
      }
    }
