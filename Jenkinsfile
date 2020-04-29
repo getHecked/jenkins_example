@@ -1,5 +1,4 @@
 def output
-
 pipeline {
    agent any
    tools {
