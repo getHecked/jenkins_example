@@ -17,5 +17,10 @@ pipeline {
             sh 'go test'
          }
       }
+      stage('Build'){
+         steps{
+            build job: 'multi-branch-deploy', parameters: [gitParameter(name: 'GITBRANCH', value: 'origin/master')]
+         }
+      }
    }
 }
