@@ -12,6 +12,11 @@ pipeline {
              }
          }
       }
+      stage('Step Test') {
+         steps {
+            sh 'go test'
+         }
+      }
       stage('Step two') {
          steps {
             sh 'CGO_ENABLED=0 go build -o example1'
