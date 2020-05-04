@@ -14,12 +14,12 @@ pipeline {
       }
       stage('Step two') {
          steps {
-            sh 'go build'
+            sh 'CGO_ENABLED=0 go build -o example1'
          }
       }
       stage('Publish artifact') {
        steps {
-         archiveArtifacts 'hw-day2_master'
+         archiveArtifacts 'example1'
        }
      }
    }
